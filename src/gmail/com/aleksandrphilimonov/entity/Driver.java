@@ -11,11 +11,11 @@ import java.util.List;
 public class Driver {
 
     @NotNull
-    @Regexp(regExp = "[^A-Za-z]")
+    @Regexp(regExp = "[A-Z]{2}\\d{7}")
     private String stringField;
 
-    @Max
-    @Min
+    @Max(max = 10000)
+    @Min(min = 10)
     private int numberField;
 
     @NotNull

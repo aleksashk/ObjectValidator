@@ -8,5 +8,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Regexp {
-    String regExp() default "[A-Z]{2}\\d{7}";
+    String regExp();
 }

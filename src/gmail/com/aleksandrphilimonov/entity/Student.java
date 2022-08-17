@@ -10,12 +10,12 @@ import java.util.List;
 
 public class Student {
 
-    @Regexp
+    @Regexp(regExp =  "[A-Z]{2}\\d{3}")
     @NotNull
     private String strField;
 
-    @Min
-    @Max
+    @Min(min = 15)
+    @Max(max = 200)
     private Float numberField;
 
     @NotEmpty
