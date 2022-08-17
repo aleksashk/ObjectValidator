@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="766bf7ef-b431-4de5-b0e2-cf56893caaf6" name="Changes" comment="" />
+    <list default="true" id="766bf7ef-b431-4de5-b0e2-cf56893caaf6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/task/task.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/Task01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/Task01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Max.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Max.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Min.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Min.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/NotEmpty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/NotEmpty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/NotNull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/NotNull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Regexp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Regexp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/entity/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/entity/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/entity/Student.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +32,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/JavaValidator/ObjectValidator/src/gmail/com/aleksandrphilimonov"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -31,8 +45,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660748039654</updated>
+      <workItem from="1660748041358" duration="314000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

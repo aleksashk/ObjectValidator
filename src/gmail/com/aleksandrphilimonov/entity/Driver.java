@@ -1,4 +1,4 @@
-package gmail.com.aleksandrphilimonov;
+package gmail.com.aleksandrphilimonov.entity;
 
 import gmail.com.aleksandrphilimonov.annotations.Max;
 import gmail.com.aleksandrphilimonov.annotations.Min;

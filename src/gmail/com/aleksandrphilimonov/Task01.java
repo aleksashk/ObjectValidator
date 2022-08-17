@@ -1,4 +1,7 @@
-package s13;
+package gmail.com.aleksandrphilimonov;
+
+import gmail.com.aleksandrphilimonov.entity.Driver;
+import gmail.com.aleksandrphilimonov.entity.Student;
 
 import java.util.Arrays;
 import java.util.Collections;

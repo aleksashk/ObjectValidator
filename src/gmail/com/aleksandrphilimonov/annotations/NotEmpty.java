@@ -1,4 +1,4 @@
-package s13;
+package gmail.com.aleksandrphilimonov.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

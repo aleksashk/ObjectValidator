@@ -1,4 +1,10 @@
-package s13;
+package gmail.com.aleksandrphilimonov;
+
+import gmail.com.aleksandrphilimonov.annotations.Max;
+import gmail.com.aleksandrphilimonov.annotations.Min;
+import gmail.com.aleksandrphilimonov.annotations.NotEmpty;
+import gmail.com.aleksandrphilimonov.annotations.NotNull;
+import gmail.com.aleksandrphilimonov.annotations.Regexp;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
