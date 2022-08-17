@@ -15,32 +15,36 @@ public class Validator {
     public static boolean validate(Object obj) throws IllegalAccessException {
         Class<?> claz = obj.getClass();
 
-        Field[] fields = claz.getDeclaredFields();
+        Field[] fields = claz.getDeclaredFields();//получаем поля класса
         for (Field field : fields) {
-            field.setAccessible(true);
+            field.setAccessible(true);//открываем доступ к полям
 
-            Annotation[] annotations = field.getDeclaredAnnotations();
+            Annotation[] annotations = field.getDeclaredAnnotations();//формируем массив аннотаций
+            //которые расположены над каждым полем
 
-            for (Annotation an : annotations) {
-                if (an.annotationType().isAnnotationPresent(NotNull.class)) {
-                    if (field.get(obj) == null) {
+            for (Annotation an : annotations) {//перебираем все аннотации конкретного поля
+                if (an.annotationType().isAnnotationPresent(NotNull.class)) {//проверяем, совпадает ли аннотация над полем с аннотацией NotNull
+                    if (field.get(obj) == null) {//проверяем поле на null, если null, то объект не валиден
                         return false;
                     }
                 }
                 if (an.annotationType().isAnnotationPresent(Regexp.class) && field.get(obj) instanceof String) {
-                    if (!field.get(obj).toString().matches("[A-Z]{2}\\d{7}")) {
+                    Regexp regexpAnnotation = (Regexp) an;
+                    if (!field.get(obj).toString().matches((regexpAnnotation).regExp())) {
                         return false;
                     }
                 }
                 if (an.annotationType().isAnnotationPresent(Max.class) && field.get(obj) instanceof Number) {
                     BigDecimal bigDecimal = new BigDecimal(String.valueOf(field.get(obj)));
-                    if (bigDecimal.compareTo(new BigDecimal(String.valueOf(10000))) < 0) {
+                    Max maxAnnotation = (Max) an;
+                    if (bigDecimal.compareTo(new BigDecimal(String.valueOf(maxAnnotation.max()))) < 0) {
                         return false;
                     }
                 }
                 if (an.annotationType().isAnnotationPresent(Min.class) && field.get(obj) instanceof Number) {
                     BigDecimal bigDecimal = new BigDecimal(String.valueOf(field.get(obj)));
-                    if (bigDecimal.compareTo(new BigDecimal(String.valueOf(10000))) < 0) {
+                    Min minAnnotation = (Min) an;
+                    if (bigDecimal.compareTo(new BigDecimal(String.valueOf(minAnnotation))) < 0) {
                         return false;
                     }
                 }
