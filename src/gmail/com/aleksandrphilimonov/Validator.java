@@ -38,7 +38,7 @@ public class Validator {
                 if (an.annotationType().isAssignableFrom(Max.class) && field.get(obj) instanceof Number) {
                     BigDecimal bigDecimal = new BigDecimal(String.valueOf(field.get(obj)));
                     Max maxAnnotation = (Max) an;
-                    if (bigDecimal.compareTo(new BigDecimal(String.valueOf(maxAnnotation.max()))) < 0) {
+                    if (bigDecimal.compareTo(new BigDecimal(String.valueOf(maxAnnotation.max()))) > 0) {
                         return false;
                     }
                 }

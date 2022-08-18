@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="766bf7ef-b431-4de5-b0e2-cf56893caaf6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/Task01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/Task01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Max.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Max.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Min.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Min.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Regexp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/annotations/Regexp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/entity/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/entity/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gmail/com/aleksandrphilimonov/entity/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660748039654</updated>
       <workItem from="1660748041358" duration="985000" />
-      <workItem from="1660759090722" duration="4394000" />
+      <workItem from="1660759090722" duration="5521000" />
     </task>
     <servers />
   </component>
