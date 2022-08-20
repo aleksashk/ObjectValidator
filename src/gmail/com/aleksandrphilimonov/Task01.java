@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Task01 {
     public static void main(String[] args) throws IllegalAccessException {
-        Student student1 = new Student("ER124", 21.1455f, Arrays.asList(2.36, 5.02, 6.54775));
+        Student student1 = new Student("ER124", 21.1455f, List.of(2.36, 5.02, 6.54775));
         Student student2 = new Student("75488AA", 11455f, Collections.EMPTY_LIST);
 
         Driver driver1 = new Driver("DF2314578", 2445, List.of("F", "D", "B"));

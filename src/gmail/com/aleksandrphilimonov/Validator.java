@@ -19,38 +19,40 @@ public class Validator {
         Field[] fields = claz.getDeclaredFields();//получаем поля класса
         for (Field field : fields) {
             field.setAccessible(true);//открываем доступ к полям
+            Object objectField = field.get(obj);
 
             Annotation[] annotations = field.getDeclaredAnnotations();//формируем массив аннотаций
             //которые расположены над каждым полем
 
             for (Annotation an : annotations) {//перебираем все аннотации конкретного поля
-                if (an.annotationType().isAssignableFrom(NotNull.class)) {//проверяем, совпадает ли аннотация над полем с аннотацией NotNull
-                    if (field.get(obj) == null) {//проверяем поле на null, если null, то объект не валиден
+                Class<?> annotationType = an.annotationType();
+                if (annotationType.isAssignableFrom(NotNull.class)) {//проверяем, совпадает ли аннотация над полем с аннотацией NotNull
+                    if (objectField == null) {//проверяем поле на null, если null, то объект не валиден
                         return false;
                     }
                 }
-                if (an.annotationType().isAssignableFrom(Regexp.class) && field.get(obj) instanceof String) {
+                if (annotationType.isAssignableFrom(Regexp.class) && objectField instanceof String) {
                     Regexp regexpAnnotation = (Regexp) an;
-                    if (!field.get(obj).toString().matches(regexpAnnotation.regExp())) {
+                    if (!((String)objectField).matches(regexpAnnotation.regExp())) {
                         return false;
                     }
                 }
-                if (an.annotationType().isAssignableFrom(Max.class) && field.get(obj) instanceof Number) {
-                    BigDecimal bigDecimal = new BigDecimal(String.valueOf(field.get(obj)));
+                if (annotationType.isAssignableFrom(Max.class) && objectField instanceof Number) {
+                    BigDecimal bigDecimal = new BigDecimal(String.valueOf(objectField));
                     Max maxAnnotation = (Max) an;
                     if (bigDecimal.compareTo(new BigDecimal(String.valueOf(maxAnnotation.max()))) > 0) {
                         return false;
                     }
                 }
-                if (an.annotationType().isAssignableFrom(Min.class) && field.get(obj) instanceof Number) {
-                    BigDecimal bigDecimal = new BigDecimal(String.valueOf(field.get(obj)));
+                if (annotationType.isAssignableFrom(Min.class) && objectField instanceof Number) {
+                    BigDecimal bigDecimal = new BigDecimal(String.valueOf(objectField));
                     Min minAnnotation = (Min) an;
                     if (bigDecimal.compareTo(new BigDecimal(String.valueOf(minAnnotation.min()))) < 0) {
                         return false;
                     }
                 }
-                if (an.annotationType().isAssignableFrom(NotEmpty.class) && field.get(obj) instanceof Collection<?>) {
-                    if (((Collection<?>) field.get(obj)).isEmpty()) {
+                if (annotationType.isAssignableFrom(NotEmpty.class) && objectField instanceof Collection<?>) {
+                    if (((Collection<?>) objectField).isEmpty()) {
                         return false;
                     }
                 }
